@@ -1,4 +1,22 @@
 :root {
+  --bg: #f4f7fb;
+  --bg-elevated: #ffffff;
+  --surface: rgba(255, 255, 255, 0.94);
+  --surface-strong: #ffffff;
+  --surface-soft: rgba(17, 24, 39, 0.04);
+  --text-strong: #0f172a;
+  --text-soft: #475569;
+  --border: rgba(148, 163, 184, 0.35);
+  --accent: #2563eb;
+  --accent-strong: #1d4ed8;
+  --accent-soft: rgba(37, 99, 235, 0.09);
+  --success: #0f766e;
+  --shadow-soft: 0 18px 48px rgba(15, 23, 42, 0.08);
+  --shadow-strong: 0 30px 70px rgba(15, 23, 42, 0.12);
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
   --bg: #07111f;
   --bg-elevated: #0d1b2a;
   --surface: rgba(15, 23, 42, 0.88);
@@ -9,27 +27,11 @@
   --border: rgba(148, 163, 184, 0.22);
   --accent: #73a9ff;
   --accent-strong: #4f8cff;
+  --accent-soft: rgba(115, 169, 255, 0.12);
   --success: #8ae4c0;
   --shadow-soft: 0 18px 46px rgba(2, 6, 23, 0.36);
   --shadow-strong: 0 28px 70px rgba(2, 6, 23, 0.48);
   color-scheme: dark;
-}
-
-:root[data-theme='light'] {
-  --bg: #f3f7fc;
-  --bg-elevated: #ffffff;
-  --surface: rgba(255, 255, 255, 0.9);
-  --surface-strong: #ffffff;
-  --surface-soft: rgba(15, 23, 42, 0.04);
-  --text-strong: #0f172a;
-  --text-soft: #475569;
-  --border: rgba(148, 163, 184, 0.35);
-  --accent: #2563eb;
-  --accent-strong: #1d4ed8;
-  --success: #0f766e;
-  --shadow-soft: 0 18px 46px rgba(15, 23, 42, 0.08);
-  --shadow-strong: 0 28px 70px rgba(15, 23, 42, 0.12);
-  color-scheme: light;
 }
 
 html {
@@ -39,8 +41,8 @@ html {
 body {
   margin: 0;
   background:
-    radial-gradient(circle at top left, rgba(115, 169, 255, 0.18), transparent 28%),
-    radial-gradient(circle at bottom right, rgba(79, 140, 255, 0.12), transparent 20%),
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.12), transparent 24%),
+    radial-gradient(circle at bottom right, rgba(52, 211, 153, 0.09), transparent 18%),
     var(--bg);
   color: var(--text-strong);
   font-family: Inter, 'Segoe UI', sans-serif;
