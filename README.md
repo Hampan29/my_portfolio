@@ -1,16 +1,45 @@
-# React + Vite
+# HAMPAN Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A modern, responsive personal portfolio website for a Computer Science Engineering student.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This project showcases:
+- About me
+- Education
+- Skills
+- Projects
+- Learning journey
+- Contact details
+- Professional recruiter-focused presentation
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- Vite
+- CSS
+- GitHub Pages deployment support
 
-## Expanding the Oxlint configuration
+## Local Development
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+```bash
+npm install
+npm run dev
+```
+
+## Production Build
+
+```bash
+npm run build
+```
+
+## Deployment
+
+This project is configured for GitHub Pages deployment.
+
+## Contact
+
+- Name: HAMPAN
+- Email: hampangowda2934@gmail.com
+- GitHub: https://github.com/Hampan29
+- LinkedIn: https://www.linkedin.com/in/hampan-gowda-k-l-58330b375/
