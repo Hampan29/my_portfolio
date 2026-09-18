@@ -27,7 +27,7 @@ export const portfolio = {
     {
       degree: 'B.Tech in Computer Science Engineering',
       college: 'REVA UNIVERSITY',
-      period: '2023 – 2027',
+      period: '2025 – 2029',
       status: 'Current status: 2nd Year',
     },
   ],
