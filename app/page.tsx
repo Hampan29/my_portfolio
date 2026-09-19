@@ -194,7 +194,7 @@ export default function Home() {
               className="mb-6 inline-flex items-center gap-2 rounded-full border border-sky-200 bg-sky-100 px-3 py-1.5 text-[10px] font-medium uppercase tracking-[0.28em] text-sky-700 dark:border-sky-400/20 dark:bg-sky-400/10 dark:text-sky-300"
             >
               <Sparkles className="h-3.5 w-3.5" />
-              2nd Year B.Tech CS | Aspiring Software Engineer
+              Open to internships • 2nd Year B.Tech CS
             </motion.div>
 
             <motion.h1
@@ -215,14 +215,33 @@ export default function Home() {
               transition={{ duration: 0.7, delay: 0.25 }}
               className="mt-6 max-w-xl text-base leading-8 text-slate-600 md:text-lg dark:text-slate-300"
             >
-              I&apos;m a Computer Science Engineering student focused on building a solid foundation in software
-              development, logical problem solving, and practical project work.
+              I&apos;m a Computer Science Engineering student focused on frontend engineering, problem solving, and building
+              real-world web products with clean UX and strong fundamentals.
             </motion.p>
 
             <motion.div
               initial={{ opacity: 0, y: 22 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.35 }}
+              className="mt-6 grid max-w-xl gap-3 sm:grid-cols-2"
+            >
+              {[
+                { label: 'Primary skills', value: 'React • Next.js • DSA' },
+                { label: 'Current focus', value: 'Frontend + problem solving' },
+                { label: 'Availability', value: 'Internships / student roles' },
+                { label: 'Location', value: 'Bengaluru, Karnataka' },
+              ].map((item) => (
+                <div key={item.label} className="rounded-2xl border border-slate-200 bg-white/80 px-3 py-3 shadow-[0_8px_18px_rgba(15,23,42,0.04)] dark:border-slate-200/10 dark:bg-slate-900/60">
+                  <p className="text-[10px] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400">{item.label}</p>
+                  <p className="mt-2 text-sm font-semibold text-slate-800 dark:text-slate-100">{item.value}</p>
+                </div>
+              ))}
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 22 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.4 }}
               className="mt-8 flex flex-wrap items-center gap-4"
             >
               <motion.a
@@ -250,7 +269,7 @@ export default function Home() {
                 className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-transparent px-5 py-3 text-sm font-semibold text-slate-700 transition hover:border-slate-300 hover:text-slate-900 dark:border-slate-200/15 dark:text-slate-200 dark:hover:border-slate-200/40 dark:hover:text-white"
               >
                 <Download className="h-4 w-4" />
-                Download Resume
+                Resume
               </motion.a>
             </motion.div>
 
@@ -331,7 +350,21 @@ export default function Home() {
           transition={{ duration: 0.5 }}
           className="section-shell"
         >
-          <SectionHeading eyebrow="About" title="A student developer with a practical mindset and a strong learning focus." />
+          <SectionHeading eyebrow="Quick profile" title="A recruiter-friendly snapshot of my technical strengths and work ethic." />
+
+          <div className="mb-8 grid gap-4 md:grid-cols-4">
+            {[
+              { label: 'Core stack', value: 'React, Next.js, JavaScript' },
+              { label: 'Problem solving', value: 'DSA, logic, debugging' },
+              { label: 'Project style', value: 'Clean UI, practical features' },
+              { label: 'Career goal', value: 'Software engineering internship' },
+            ].map((item) => (
+              <div key={item.label} className="panel-surface-soft p-5">
+                <p className="text-[10px] uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">{item.label}</p>
+                <p className="mt-3 text-sm font-semibold text-slate-800 dark:text-slate-100">{item.value}</p>
+              </div>
+            ))}
+          </div>
 
           <div className="grid gap-6 md:grid-cols-2">
             <div className="panel-surface-soft p-7">
