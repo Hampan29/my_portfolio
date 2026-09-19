@@ -173,78 +173,118 @@ export default function Home() {
       <main className="mx-auto max-w-6xl px-6 pb-16 pt-10 md:pt-20">
         <motion.section
           id="home"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 28 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: 'easeOut' }}
-          className="grid items-center gap-10 pb-16 pt-10 md:grid-cols-[1.2fr_0.8fr] md:pb-20"
+          transition={{ duration: 0.7, ease: 'easeOut' }}
+          className="relative grid items-center gap-12 pb-16 pt-10 md:grid-cols-[1.18fr_0.82fr] md:pb-20 md:pt-14"
         >
-          <div>
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-sky-400/20 bg-sky-400/10 px-3 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-sky-300">
+          <div className="relative">
+            <motion.div
+              initial={{ opacity: 0, y: 18 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="mb-6 inline-flex items-center gap-2 rounded-full border border-sky-400/20 bg-sky-400/10 px-3 py-1.5 text-[10px] font-medium uppercase tracking-[0.28em] text-sky-300"
+            >
               <Sparkles className="h-3.5 w-3.5" />
               2nd Year B.Tech CS | Aspiring Software Engineer
-            </div>
+            </motion.div>
 
-            <h1 className="max-w-xl text-4xl font-semibold tracking-[-0.06em] text-slate-50 md:text-6xl">
-              HAMPAN
-            </h1>
+            <motion.h1
+              initial={{ opacity: 0, y: 22 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.15 }}
+              className="max-w-2xl text-5xl font-black leading-[0.95] tracking-[-0.08em] text-slate-50 md:text-7xl"
+            >
+              <span className="block">HAMPAN</span>
+              <span className="mt-2 block bg-gradient-to-r from-sky-300 via-cyan-200 to-white bg-clip-text text-transparent">
+                Building thoughtful software.
+              </span>
+            </motion.h1>
 
-            <p className="mt-6 max-w-xl text-lg leading-8 text-slate-300">
+            <motion.p
+              initial={{ opacity: 0, y: 22 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.25 }}
+              className="mt-6 max-w-xl text-base leading-8 text-slate-300 md:text-lg"
+            >
               I&apos;m a Computer Science Engineering student focused on building a solid foundation in software
               development, logical problem solving, and practical project work.
-            </p>
+            </motion.p>
 
-            <div className="mt-8 flex flex-wrap items-center gap-4">
-              <a
+            <motion.div
+              initial={{ opacity: 0, y: 22 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.35 }}
+              className="mt-8 flex flex-wrap items-center gap-4"
+            >
+              <motion.a
+                whileHover={{ y: -1, scale: 1.01 }}
+                whileTap={{ scale: 0.99 }}
                 href="#projects"
-                className="inline-flex items-center gap-2 rounded-full bg-sky-400 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-sky-300"
+                className="inline-flex items-center gap-2 rounded-full bg-sky-400 px-5 py-3 text-sm font-semibold text-slate-950 shadow-lg shadow-sky-500/20 transition hover:bg-sky-300"
               >
                 View Projects
                 <ArrowRight className="h-4 w-4" />
-              </a>
-              <a
+              </motion.a>
+              <motion.a
+                whileHover={{ y: -1 }}
+                whileTap={{ scale: 0.99 }}
                 href="#contact"
                 className="inline-flex items-center gap-2 rounded-full border border-slate-200/15 bg-white/5 px-5 py-3 text-sm font-semibold text-slate-100 transition hover:border-sky-400/40 hover:text-sky-300"
               >
                 Contact Me
-              </a>
-              <a
+              </motion.a>
+              <motion.a
+                whileHover={{ y: -1 }}
+                whileTap={{ scale: 0.99 }}
                 href="/resume.pdf"
                 download
                 className="inline-flex items-center gap-2 rounded-full border border-slate-200/15 bg-transparent px-5 py-3 text-sm font-semibold text-slate-200 transition hover:border-slate-200/40 hover:text-white"
               >
                 <Download className="h-4 w-4" />
                 Download Resume
-              </a>
-            </div>
+              </motion.a>
+            </motion.div>
 
-            <div className="mt-8 flex flex-wrap items-center gap-3 text-sm text-slate-300">
-              <a href="https://github.com/Hampan29" className="inline-flex items-center gap-2 rounded-full border border-slate-200/10 bg-slate-900/60 px-3 py-2 hover:text-sky-300" target="_blank" rel="noreferrer">
+            <motion.div
+              initial={{ opacity: 0, y: 18 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.45 }}
+              className="mt-8 flex flex-wrap items-center gap-3 text-sm text-slate-300"
+            >
+              <a href="https://github.com/Hampan29" className="inline-flex items-center gap-2 rounded-full border border-slate-200/10 bg-slate-900/60 px-3 py-2 transition hover:border-sky-400/40 hover:text-sky-300" target="_blank" rel="noreferrer">
                 <Github className="h-4 w-4" />
                 GitHub
               </a>
-              <a href="https://www.linkedin.com/in/hampan-gowda-k-l-58330b375/" className="inline-flex items-center gap-2 rounded-full border border-slate-200/10 bg-slate-900/60 px-3 py-2 hover:text-sky-300" target="_blank" rel="noreferrer">
+              <a href="https://www.linkedin.com/in/hampan-gowda-k-l-58330b375/" className="inline-flex items-center gap-2 rounded-full border border-slate-200/10 bg-slate-900/60 px-3 py-2 transition hover:border-sky-400/40 hover:text-sky-300" target="_blank" rel="noreferrer">
                 <Linkedin className="h-4 w-4" />
                 LinkedIn
               </a>
-              <a href="mailto:hampangowda2934@gmail.com" className="inline-flex items-center gap-2 rounded-full border border-slate-200/10 bg-slate-900/60 px-3 py-2 hover:text-sky-300">
+              <a href="mailto:hampangowda2934@gmail.com" className="inline-flex items-center gap-2 rounded-full border border-slate-200/10 bg-slate-900/60 px-3 py-2 transition hover:border-sky-400/40 hover:text-sky-300">
                 <Mail className="h-4 w-4" />
                 Email
               </a>
-            </div>
+            </motion.div>
           </div>
 
           <motion.aside
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.2, ease: 'easeOut' }}
-            className="rounded-3xl border border-slate-200/10 bg-white/[0.03] p-6 shadow-soft"
+            initial={{ opacity: 0, x: 22 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, delay: 0.25, ease: 'easeOut' }}
+            className="relative overflow-hidden rounded-[28px] border border-slate-200/10 bg-slate-900/70 p-6 shadow-[0_30px_80px_rgba(14,165,233,0.12)] backdrop-blur-sm"
           >
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-sky-400/20 bg-sky-400/10 px-3 py-1.5 text-xs font-medium text-sky-300">
+            <motion.div
+              animate={{ y: [0, -8, 0] }}
+              transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
+              className="absolute -right-8 -top-8 h-28 w-28 rounded-full bg-sky-400/20 blur-2xl"
+            />
+
+            <div className="relative mb-4 inline-flex items-center gap-2 rounded-full border border-sky-400/20 bg-sky-400/10 px-3 py-1.5 text-xs font-medium text-sky-300">
               <Rocket className="h-3.5 w-3.5" />
               Building with intention
             </div>
 
-            <div className="space-y-5 border-t border-slate-200/10 pt-5">
+            <div className="relative space-y-5 border-t border-slate-200/10 pt-5">
               <div>
                 <p className="text-[10px] uppercase tracking-[0.22em] text-slate-400">Location</p>
                 <div className="mt-2 flex items-center gap-2 text-sm text-slate-200">
