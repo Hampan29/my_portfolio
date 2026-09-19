@@ -97,7 +97,7 @@ function SectionHeading({ eyebrow, title }: { eyebrow: string; title: string }) 
   return (
     <div className="mb-10 max-w-2xl">
       <p className="mb-3 text-xs font-semibold uppercase tracking-[0.24em] text-sky-400">{eyebrow}</p>
-      <h2 className="text-3xl font-semibold tracking-tight text-white md:text-4xl">{title}</h2>
+      <h2 className="text-3xl font-semibold tracking-[-0.06em] text-white md:text-4xl">{title}</h2>
     </div>
   );
 }
@@ -326,16 +326,16 @@ export default function Home() {
           <SectionHeading eyebrow="About" title="A student developer with a practical mindset and a strong learning focus." />
 
           <div className="grid gap-6 md:grid-cols-2">
-            <div className="rounded-3xl border border-slate-200/10 bg-white/[0.02] p-7">
-              <p className="text-base leading-8 text-slate-200">
+            <div className="rounded-3xl border border-sky-400/10 bg-slate-900/70 p-7 shadow-[0_0_0_1px_rgba(14,165,233,0.06),0_24px_48px_rgba(2,6,23,0.45)]">
+              <p className="text-base leading-8 text-slate-100">
                 I am a second-year B.Tech Computer Science Engineering student focused on strengthening my programming
                 and software development skills through hands-on learning. I enjoy solving problems, understanding how
                 systems work, and building practical software that turns ideas into real-world functionality.
               </p>
             </div>
 
-            <div className="rounded-3xl border border-slate-200/10 bg-white/[0.02] p-7">
-              <p className="text-base leading-8 text-slate-200">
+            <div className="rounded-3xl border border-sky-400/10 bg-slate-900/70 p-7 shadow-[0_0_0_1px_rgba(14,165,233,0.06),0_24px_48px_rgba(2,6,23,0.45)]">
+              <p className="text-base leading-8 text-slate-100">
                 My interests lie in modern web development, data structures, and clean UI design. I am actively learning
                 through coursework, personal projects, and problem-solving practice while aiming to build a strong base for
                 internships, collaboration, and future software engineering opportunities.
@@ -356,13 +356,13 @@ export default function Home() {
 
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {skills.map((group) => (
-              <div key={group.title} className="rounded-3xl border border-slate-200/10 bg-white/[0.02] p-6">
+              <div key={group.title} className="rounded-3xl border border-sky-400/10 bg-slate-900/70 p-6 shadow-[0_0_0_1px_rgba(14,165,233,0.05),0_18px_40px_rgba(2,6,23,0.35)] transition hover:-translate-y-1 hover:border-sky-400/20">
                 <h3 className="mb-4 text-lg font-semibold text-white">{group.title}</h3>
                 <div className="flex flex-wrap gap-2">
                   {group.items.map((item) => (
                     <span
                       key={item}
-                      className="rounded-full border border-slate-200/10 bg-slate-900/80 px-2.5 py-1.5 text-xs text-slate-200 transition hover:border-sky-400/40 hover:text-sky-300"
+                      className="rounded-full border border-slate-200/10 bg-slate-950/80 px-2.5 py-1.5 text-xs text-slate-100 transition hover:border-sky-400/40 hover:text-sky-300"
                     >
                       {item}
                     </span>
@@ -389,7 +389,7 @@ export default function Home() {
                 key={project.title}
                 whileHover={{ y: -4 }}
                 transition={{ duration: 0.2 }}
-                className="group flex h-full flex-col overflow-hidden rounded-3xl border border-slate-200/10 bg-white/[0.02]"
+                className="group flex h-full flex-col overflow-hidden rounded-3xl border border-sky-400/10 bg-slate-900/70 shadow-[0_0_0_1px_rgba(14,165,233,0.05),0_18px_40px_rgba(2,6,23,0.4)]"
               >
                 <div className="flex h-40 items-end border-b border-slate-200/10 bg-[radial-gradient(circle_at_top_left,_rgba(125,211,252,0.18),transparent_25%),linear-gradient(135deg,#0f172a,#1e293b)] p-5">
                   <span className="rounded-full border border-white/10 bg-black/20 px-2.5 py-1 text-[10px] uppercase tracking-[0.2em] text-sky-200">
@@ -403,7 +403,7 @@ export default function Home() {
                     <ExternalLink className="h-4 w-4 text-slate-400 transition group-hover:text-sky-300" />
                   </div>
 
-                  <p className="text-sm leading-7 text-slate-200">{project.description}</p>
+                  <p className="text-sm leading-7 text-slate-100">{project.description}</p>
 
                   <div className="mt-5 flex flex-wrap gap-2">
                     {project.stack.map((tech) => (
@@ -437,7 +437,7 @@ export default function Home() {
         >
           <SectionHeading eyebrow="Education" title="Academic foundation in Computer Science and software learning." />
 
-          <div className="rounded-3xl border border-slate-200/10 bg-white/[0.02] p-7">
+          <div className="rounded-3xl border border-sky-400/10 bg-slate-900/70 p-7 shadow-[0_0_0_1px_rgba(14,165,233,0.06),0_24px_48px_rgba(2,6,23,0.45)]">
             <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
               <div>
                 <div className="mb-2 inline-flex items-center gap-2 rounded-full border border-sky-400/20 bg-sky-400/10 px-3 py-1 text-xs uppercase tracking-[0.18em] text-sky-300">
@@ -447,7 +447,7 @@ export default function Home() {
                 <h3 className="text-2xl font-semibold text-white">REVA UNIVERSITY</h3>
               </div>
 
-              <div className="text-sm text-slate-300">2025 — 2029</div>
+              <div className="text-sm text-slate-100">2025 — 2029</div>
             </div>
 
             <div className="mt-6 grid gap-4 md:grid-cols-3">
@@ -479,13 +479,13 @@ export default function Home() {
 
           <div className="grid gap-5 md:grid-cols-3">
             {achievements.map((item) => (
-              <div key={item.title} className="rounded-3xl border border-slate-200/10 bg-white/[0.02] p-6">
+              <div key={item.title} className="rounded-3xl border border-sky-400/10 bg-slate-900/70 p-6 shadow-[0_0_0_1px_rgba(14,165,233,0.05),0_18px_40px_rgba(2,6,23,0.35)]">
                 <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-sky-400/20 bg-sky-400/10 px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-sky-300">
                   <Trophy className="h-3.5 w-3.5" />
                   {item.meta}
                 </div>
                 <h3 className="mb-3 text-lg font-semibold text-white">{item.title}</h3>
-                <p className="text-sm leading-7 text-slate-200">{item.detail}</p>
+                <p className="text-sm leading-7 text-slate-100">{item.detail}</p>
               </div>
             ))}
           </div>
@@ -501,17 +501,17 @@ export default function Home() {
         >
           <SectionHeading eyebrow="Contact" title="Let’s connect and build something meaningful." />
 
-          <div className="grid gap-8 rounded-3xl border border-slate-200/10 bg-white/[0.02] p-7 md:grid-cols-[1fr_1.2fr]">
+          <div className="grid gap-8 rounded-3xl border border-sky-400/10 bg-slate-900/70 p-7 shadow-[0_0_0_1px_rgba(14,165,233,0.06),0_24px_48px_rgba(2,6,23,0.45)] md:grid-cols-[1fr_1.2fr]">
             <div className="space-y-5">
-              <a href="mailto:hampangowda2934@gmail.com" className="flex items-center gap-3 text-slate-200 hover:text-sky-300">
+              <a href="mailto:hampangowda2934@gmail.com" className="flex items-center gap-3 text-slate-100 hover:text-sky-300">
                 <Mail className="h-4 w-4 text-sky-300" />
                 hampangowda2934@gmail.com
               </a>
-              <a href="https://www.linkedin.com/in/hampan-gowda-k-l-58330b375/" className="flex items-center gap-3 text-slate-200 hover:text-sky-300" target="_blank" rel="noreferrer">
+              <a href="https://www.linkedin.com/in/hampan-gowda-k-l-58330b375/" className="flex items-center gap-3 text-slate-100 hover:text-sky-300" target="_blank" rel="noreferrer">
                 <Linkedin className="h-4 w-4 text-sky-300" />
                 linkedin.com/in/hampan-gowda-k-l-58330b375
               </a>
-              <a href="https://github.com/Hampan29" className="flex items-center gap-3 text-slate-200 hover:text-sky-300" target="_blank" rel="noreferrer">
+              <a href="https://github.com/Hampan29" className="flex items-center gap-3 text-slate-100 hover:text-sky-300" target="_blank" rel="noreferrer">
                 <Github className="h-4 w-4 text-sky-300" />
                 github.com/Hampan29
               </a>
