@@ -52,7 +52,7 @@ const projects = [
   {
     title: 'Campus Connect',
     description:
-      'A student-focused collaboration platform concept for campus announcements, club visibility, and project discovery to make student engagement more organized and accessible.',
+      'Designed a student collaboration concept to simplify campus announcements, club discovery, and project visibility in one structured experience.',
     stack: ['Next.js', 'TypeScript', 'Tailwind', 'MongoDB'],
     github: 'https://github.com/Hampan29',
     demo: 'https://hampan29.github.io/my_portfolio/',
@@ -60,7 +60,7 @@ const projects = [
   {
     title: 'StudyFlow',
     description:
-      'A productivity-oriented study planner for managing deadlines, organizing daily goals, and tracking progress with a clear, student-friendly workflow.',
+      'Built a study planner focused on reducing task overload by organizing deadlines, daily goals, and progress tracking in a simple workflow.',
     stack: ['React', 'Node.js', 'Express', 'MongoDB'],
     github: 'https://github.com/Hampan29',
     demo: 'https://hampan29.github.io/my_portfolio/',
@@ -68,7 +68,7 @@ const projects = [
   {
     title: 'CodeTracker',
     description:
-      'A lightweight coding-progress tracker built to monitor solved problems, consistency, and iterative improvement with a focused interface and clear daily rhythm.',
+      'Created a coding consistency dashboard to track solved problems, study momentum, and improvement patterns through a clean, focused interface.',
     stack: ['Next.js', 'Tailwind', 'TypeScript', 'Supabase'],
     github: 'https://github.com/Hampan29',
     demo: 'https://hampan29.github.io/my_portfolio/',
@@ -204,7 +204,7 @@ export default function Home() {
               className="mb-6 inline-flex items-center gap-2 rounded-full border border-sky-200 bg-sky-100 px-3 py-1.5 text-[10px] font-medium uppercase tracking-[0.28em] text-sky-700 dark:border-sky-400/20 dark:bg-sky-400/10 dark:text-sky-300"
             >
               <Sparkles className="h-3.5 w-3.5" />
-              Open to internships • 2nd Year B.Tech CS
+              Open to internships • Software engineering
             </motion.div>
 
             <motion.h1
@@ -225,8 +225,8 @@ export default function Home() {
               transition={{ duration: 0.7, delay: 0.25 }}
               className="mt-6 max-w-xl text-base leading-8 text-slate-600 md:text-lg dark:text-slate-300"
             >
-              I&apos;m a Computer Science Engineering student focused on frontend engineering, problem solving, and building
-              real-world web products with clean UX and strong fundamentals.
+              Frontend-focused Computer Science student building responsive web experiences with clean design, strong
+              problem-solving, and practical engineering fundamentals for real-world products.
             </motion.p>
 
             <motion.div
@@ -365,14 +365,14 @@ export default function Home() {
           transition={{ duration: 0.5 }}
           className="section-shell"
         >
-          <SectionHeading eyebrow="Quick profile" title="A recruiter-friendly snapshot of my technical strengths and work ethic." />
+          <SectionHeading eyebrow="Quick profile" title="A software-focused student with a practical, problem-solving mindset." />
 
           <div className="mb-8 grid gap-4 md:grid-cols-4">
             {[
-              { label: 'Core stack', value: 'React, Next.js, JavaScript' },
-              { label: 'Problem solving', value: 'DSA, logic, debugging' },
-              { label: 'Project style', value: 'Clean UI, practical features' },
-              { label: 'Career goal', value: 'Software engineering internship' },
+              { label: 'Core stack', value: 'React • Next.js • JavaScript' },
+              { label: 'Problem solving', value: 'DSA • logic • debugging' },
+              { label: 'Project style', value: 'Clean UI • practical features' },
+              { label: 'Goal', value: 'Software engineering internship' },
             ].map((item) => (
               <motion.div
                 key={item.label}
@@ -570,6 +570,9 @@ export default function Home() {
 
           <div className="panel-surface-soft grid gap-8 p-7 md:grid-cols-[1fr_1.2fr]">
             <div className="space-y-5">
+              <div className="rounded-2xl border border-sky-200 bg-sky-50 px-4 py-3 text-sm text-sky-700 dark:border-sky-400/20 dark:bg-sky-400/10 dark:text-sky-200">
+                Available for internships and software engineering opportunities.
+              </div>
               <motion.a whileHover={{ x: 2 }} href="mailto:hampangowda2934@gmail.com" className="flex items-center gap-3 text-slate-700 hover:text-sky-600 dark:text-slate-100 dark:hover:text-sky-300">
                 <Mail className="h-4 w-4 text-sky-600 dark:text-sky-300" />
                 hampangowda2934@gmail.com
