@@ -1,24 +1,26 @@
 # HAMPAN Portfolio
 
-A modern, responsive personal portfolio website for a Computer Science Engineering student.
+A modern personal portfolio for a second-year B.Tech Computer Science student, built with Next.js and Tailwind CSS.
 
 ## Overview
 
-This project showcases:
+This portfolio includes:
+- Hero section and introduction
 - About me
-- Education
-- Skills
-- Projects
-- Learning journey
-- Contact details
-- Professional recruiter-focused presentation
+- Education details
+- Skills and technical strengths
+- Project highlights
+- Learning focus areas
+- Contact links and social profiles
 
 ## Tech Stack
 
-- React
-- Vite
-- CSS
-- GitHub Pages deployment support
+- Next.js 14
+- React 18
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Lucide React
 
 ## Local Development
 
@@ -35,7 +37,7 @@ npm run build
 
 ## Deployment
 
-This project is configured for GitHub Pages deployment.
+The site is ready for deployment to GitHub Pages or any static hosting platform.
 
 ## Contact
 
@@ -43,3 +45,4 @@ This project is configured for GitHub Pages deployment.
 - Email: hampangowda2934@gmail.com
 - GitHub: https://github.com/Hampan29
 - LinkedIn: https://www.linkedin.com/in/hampan-gowda-k-l-58330b375/
+- X: https://x.com/urstrulyhampan
