@@ -156,24 +156,27 @@ export default function Home() {
 
           <div className="hidden items-center gap-6 md:flex">
             {navItems.map((item) => (
-              <a
+              <motion.a
                 key={item.label}
                 href={item.href}
+                whileHover={{ y: -1 }}
                 className="text-sm text-slate-600 transition hover:text-sky-600 dark:text-slate-300 dark:hover:text-sky-300"
               >
                 {item.label}
-              </a>
+              </motion.a>
             ))}
           </div>
 
           <div className="flex items-center gap-3">
             <ThemeToggle />
-            <a
+            <motion.a
               href="#contact"
+              whileHover={{ y: -1, scale: 1.01 }}
+              whileTap={{ scale: 0.99 }}
               className="hidden rounded-full border border-sky-200 bg-sky-100 px-4 py-2 text-sm font-medium text-sky-700 transition hover:border-sky-300 hover:bg-sky-200 md:inline-flex dark:border-sky-400/30 dark:bg-sky-400/10 dark:text-sky-200 dark:hover:bg-sky-400/20"
             >
               Contact Me
-            </a>
+            </motion.a>
           </div>
         </nav>
       </header>
@@ -231,10 +234,15 @@ export default function Home() {
                 { label: 'Availability', value: 'Internships / student roles' },
                 { label: 'Location', value: 'Bengaluru, Karnataka' },
               ].map((item) => (
-                <div key={item.label} className="rounded-2xl border border-slate-200 bg-white/80 px-3 py-3 shadow-[0_8px_18px_rgba(15,23,42,0.04)] dark:border-slate-200/10 dark:bg-slate-900/60">
+                <motion.div
+                  key={item.label}
+                  whileHover={{ y: -2, scale: 1.01 }}
+                  transition={{ type: 'spring', stiffness: 260, damping: 18 }}
+                  className="rounded-2xl border border-slate-200 bg-white/80 px-3 py-3 shadow-[0_8px_18px_rgba(15,23,42,0.04)] dark:border-slate-200/10 dark:bg-slate-900/60"
+                >
                   <p className="text-[10px] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400">{item.label}</p>
                   <p className="mt-2 text-sm font-semibold text-slate-800 dark:text-slate-100">{item.value}</p>
-                </div>
+                </motion.div>
               ))}
             </motion.div>
 
@@ -279,18 +287,18 @@ export default function Home() {
               transition={{ duration: 0.7, delay: 0.45 }}
               className="mt-8 flex flex-wrap items-center gap-3 text-sm text-slate-600 dark:text-slate-300"
             >
-              <a href="https://github.com/Hampan29" className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-3 py-2 transition hover:border-sky-300 hover:text-sky-600 dark:border-slate-200/10 dark:bg-slate-900/60 dark:hover:border-sky-400/40 dark:hover:text-sky-300" target="_blank" rel="noreferrer">
+              <motion.a whileHover={{ y: -1 }} whileTap={{ scale: 0.98 }} href="https://github.com/Hampan29" className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-3 py-2 transition hover:border-sky-300 hover:text-sky-600 dark:border-slate-200/10 dark:bg-slate-900/60 dark:hover:border-sky-400/40 dark:hover:text-sky-300" target="_blank" rel="noreferrer">
                 <Github className="h-4 w-4" />
                 GitHub
-              </a>
-              <a href="https://www.linkedin.com/in/hampan-gowda-k-l-58330b375/" className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-3 py-2 transition hover:border-sky-300 hover:text-sky-600 dark:border-slate-200/10 dark:bg-slate-900/60 dark:hover:border-sky-400/40 dark:hover:text-sky-300" target="_blank" rel="noreferrer">
+              </motion.a>
+              <motion.a whileHover={{ y: -1 }} whileTap={{ scale: 0.98 }} href="https://www.linkedin.com/in/hampan-gowda-k-l-58330b375/" className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-3 py-2 transition hover:border-sky-300 hover:text-sky-600 dark:border-slate-200/10 dark:bg-slate-900/60 dark:hover:border-sky-400/40 dark:hover:text-sky-300" target="_blank" rel="noreferrer">
                 <Linkedin className="h-4 w-4" />
                 LinkedIn
-              </a>
-              <a href="mailto:hampangowda2934@gmail.com" className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-3 py-2 transition hover:border-sky-300 hover:text-sky-600 dark:border-slate-200/10 dark:bg-slate-900/60 dark:hover:border-sky-400/40 dark:hover:text-sky-300">
+              </motion.a>
+              <motion.a whileHover={{ y: -1 }} whileTap={{ scale: 0.98 }} href="mailto:hampangowda2934@gmail.com" className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-3 py-2 transition hover:border-sky-300 hover:text-sky-600 dark:border-slate-200/10 dark:bg-slate-900/60 dark:hover:border-sky-400/40 dark:hover:text-sky-300">
                 <Mail className="h-4 w-4" />
                 Email
-              </a>
+              </motion.a>
             </motion.div>
           </div>
 
@@ -359,10 +367,15 @@ export default function Home() {
               { label: 'Project style', value: 'Clean UI, practical features' },
               { label: 'Career goal', value: 'Software engineering internship' },
             ].map((item) => (
-              <div key={item.label} className="panel-surface-soft p-5">
+              <motion.div
+                key={item.label}
+                whileHover={{ y: -2 }}
+                transition={{ type: 'spring', stiffness: 250, damping: 20 }}
+                className="panel-surface-soft p-5"
+              >
                 <p className="text-[10px] uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">{item.label}</p>
                 <p className="mt-3 text-sm font-semibold text-slate-800 dark:text-slate-100">{item.value}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
 
@@ -397,19 +410,25 @@ export default function Home() {
 
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {skills.map((group) => (
-              <div key={group.title} className="panel-surface-soft p-6 transition duration-300 hover:-translate-y-1 hover:border-sky-400/30 hover:shadow-[0_18px_40px_rgba(56,189,248,0.09)]">
+              <motion.div
+                key={group.title}
+                whileHover={{ y: -2 }}
+                transition={{ type: 'spring', stiffness: 260, damping: 18 }}
+                className="panel-surface-soft p-6 transition duration-300 hover:border-sky-400/30 hover:shadow-[0_18px_40px_rgba(56,189,248,0.09)]"
+              >
                 <h3 className="mb-4 text-lg font-semibold text-slate-900 dark:text-white">{group.title}</h3>
                 <div className="flex flex-wrap gap-2">
                   {group.items.map((item) => (
-                    <span
+                    <motion.span
                       key={item}
+                      whileHover={{ y: -1 }}
                       className="rounded-full border border-slate-200 bg-slate-100 px-2.5 py-1.5 text-xs text-slate-700 transition hover:border-sky-300 hover:text-sky-700 dark:border-slate-200/10 dark:bg-slate-950/80 dark:text-slate-100 dark:hover:border-sky-400/40 dark:hover:text-sky-300"
                     >
                       {item}
-                    </span>
+                    </motion.span>
                   ))}
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </motion.section>
@@ -429,7 +448,7 @@ export default function Home() {
               <motion.article
                 key={project.title}
                 whileHover={{ y: -4 }}
-                transition={{ duration: 0.2 }}
+                transition={{ type: 'spring', stiffness: 260, damping: 18 }}
                 className="panel-surface-soft group flex h-full flex-col overflow-hidden"
               >
                 <div className="flex h-40 items-end border-b border-slate-200/10 bg-[radial-gradient(circle_at_top_left,_rgba(125,211,252,0.18),transparent_25%),linear-gradient(135deg,#0f172a,#1e293b)] p-5">
@@ -520,14 +539,14 @@ export default function Home() {
 
           <div className="grid gap-5 md:grid-cols-3">
             {achievements.map((item) => (
-              <div key={item.title} className="panel-surface-soft p-6">
+              <motion.div key={item.title} whileHover={{ y: -2 }} transition={{ type: 'spring', stiffness: 260, damping: 18 }} className="panel-surface-soft p-6">
                 <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-sky-200 bg-sky-100 px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-sky-700 dark:border-sky-400/20 dark:bg-sky-400/10 dark:text-sky-300">
                   <Trophy className="h-3.5 w-3.5" />
                   {item.meta}
                 </div>
                 <h3 className="mb-3 text-lg font-semibold text-slate-900 dark:text-white">{item.title}</h3>
                 <p className="text-sm leading-7 text-slate-700 dark:text-slate-100">{item.detail}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </motion.section>
@@ -544,18 +563,18 @@ export default function Home() {
 
           <div className="panel-surface-soft grid gap-8 p-7 md:grid-cols-[1fr_1.2fr]">
             <div className="space-y-5">
-              <a href="mailto:hampangowda2934@gmail.com" className="flex items-center gap-3 text-slate-700 hover:text-sky-600 dark:text-slate-100 dark:hover:text-sky-300">
+              <motion.a whileHover={{ x: 2 }} href="mailto:hampangowda2934@gmail.com" className="flex items-center gap-3 text-slate-700 hover:text-sky-600 dark:text-slate-100 dark:hover:text-sky-300">
                 <Mail className="h-4 w-4 text-sky-600 dark:text-sky-300" />
                 hampangowda2934@gmail.com
-              </a>
-              <a href="https://www.linkedin.com/in/hampan-gowda-k-l-58330b375/" className="flex items-center gap-3 text-slate-700 hover:text-sky-600 dark:text-slate-100 dark:hover:text-sky-300" target="_blank" rel="noreferrer">
+              </motion.a>
+              <motion.a whileHover={{ x: 2 }} href="https://www.linkedin.com/in/hampan-gowda-k-l-58330b375/" className="flex items-center gap-3 text-slate-700 hover:text-sky-600 dark:text-slate-100 dark:hover:text-sky-300" target="_blank" rel="noreferrer">
                 <Linkedin className="h-4 w-4 text-sky-600 dark:text-sky-300" />
                 linkedin.com/in/hampan-gowda-k-l-58330b375
-              </a>
-              <a href="https://github.com/Hampan29" className="flex items-center gap-3 text-slate-700 hover:text-sky-600 dark:text-slate-100 dark:hover:text-sky-300" target="_blank" rel="noreferrer">
+              </motion.a>
+              <motion.a whileHover={{ x: 2 }} href="https://github.com/Hampan29" className="flex items-center gap-3 text-slate-700 hover:text-sky-600 dark:text-slate-100 dark:hover:text-sky-300" target="_blank" rel="noreferrer">
                 <Github className="h-4 w-4 text-sky-600 dark:text-sky-300" />
                 github.com/Hampan29
-              </a>
+              </motion.a>
             </div>
 
             <form className="space-y-4">
@@ -571,10 +590,10 @@ export default function Home() {
                 <label className="mb-2 block text-sm text-slate-600 dark:text-slate-300">Message</label>
                 <textarea rows={5} placeholder="Tell me about your project or opportunity" className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-800 outline-none transition placeholder:text-slate-500 focus:border-sky-400 focus:ring-4 focus:ring-sky-100 dark:border-slate-200/10 dark:bg-slate-950/80 dark:text-slate-100 dark:focus:ring-sky-500/20" />
               </div>
-              <button type="button" className="inline-flex items-center gap-2 rounded-full bg-sky-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-sky-500 dark:bg-sky-400 dark:text-slate-950 dark:hover:bg-sky-300">
+              <motion.button whileHover={{ y: -1 }} whileTap={{ scale: 0.99 }} type="button" className="inline-flex items-center gap-2 rounded-full bg-sky-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-sky-500 dark:bg-sky-400 dark:text-slate-950 dark:hover:bg-sky-300">
                 Send Message
                 <ArrowRight className="h-4 w-4" />
-              </button>
+              </motion.button>
             </form>
           </div>
         </motion.section>
