@@ -148,40 +148,47 @@ export default function Home() {
       </div>
       <div className="fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(125,211,252,0.14),transparent_30%)]" />
 
-      <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/75 shadow-[0_1px_0_rgba(148,163,184,0.14)] backdrop-blur-2xl dark:border-slate-200/10 dark:bg-slate-950/70">
-        <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-6">
-          <a href="#home" className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-900 dark:text-slate-100">
-            HAMPAN
-          </a>
+      <div className="mx-auto max-w-[1320px] px-3 py-3 sm:px-4 lg:px-5">
+        <div className="relative overflow-hidden rounded-[30px] border border-slate-200/80 bg-white/40 shadow-[0_20px_60px_rgba(15,23,42,0.06)] backdrop-blur-xl dark:border-slate-200/10 dark:bg-slate-950/40 dark:shadow-[0_20px_60px_rgba(2,6,23,0.36)]">
+          <div className="pointer-events-none absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-sky-400/60 to-transparent" />
+          <div className="pointer-events-none absolute inset-x-6 bottom-0 h-px bg-gradient-to-r from-transparent via-sky-400/50 to-transparent" />
+          <div className="pointer-events-none absolute left-0 top-8 h-32 w-px bg-gradient-to-b from-transparent via-sky-400/50 to-transparent" />
+          <div className="pointer-events-none absolute right-0 top-8 h-32 w-px bg-gradient-to-b from-transparent via-sky-400/50 to-transparent" />
 
-          <div className="hidden items-center gap-6 md:flex">
-            {navItems.map((item) => (
-              <motion.a
-                key={item.label}
-                href={item.href}
-                whileHover={{ y: -1 }}
-                className="text-sm text-slate-600 transition hover:text-sky-600 dark:text-slate-300 dark:hover:text-sky-300"
-              >
-                {item.label}
-              </motion.a>
-            ))}
-          </div>
+          <header className="sticky top-3 z-50 border-b border-slate-200/80 bg-white/75 shadow-[0_1px_0_rgba(148,163,184,0.14)] backdrop-blur-2xl dark:border-slate-200/10 dark:bg-slate-950/70">
+            <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-6">
+              <a href="#home" className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-900 dark:text-slate-100">
+                HAMPAN
+              </a>
 
-          <div className="flex items-center gap-3">
-            <ThemeToggle />
-            <motion.a
-              href="#contact"
-              whileHover={{ y: -1, scale: 1.01 }}
-              whileTap={{ scale: 0.99 }}
-              className="hidden rounded-full border border-sky-200 bg-sky-100 px-4 py-2 text-sm font-medium text-sky-700 transition hover:border-sky-300 hover:bg-sky-200 md:inline-flex dark:border-sky-400/30 dark:bg-sky-400/10 dark:text-sky-200 dark:hover:bg-sky-400/20"
-            >
-              Contact Me
-            </motion.a>
-          </div>
-        </nav>
-      </header>
+              <div className="hidden items-center gap-6 md:flex">
+                {navItems.map((item) => (
+                  <motion.a
+                    key={item.label}
+                    href={item.href}
+                    whileHover={{ y: -1 }}
+                    className="text-sm text-slate-600 transition hover:text-sky-600 dark:text-slate-300 dark:hover:text-sky-300"
+                  >
+                    {item.label}
+                  </motion.a>
+                ))}
+              </div>
 
-      <main className="mx-auto max-w-6xl px-5 pb-16 pt-10 sm:px-6 md:pt-20">
+              <div className="flex items-center gap-3">
+                <ThemeToggle />
+                <motion.a
+                  href="#contact"
+                  whileHover={{ y: -1, scale: 1.01 }}
+                  whileTap={{ scale: 0.99 }}
+                  className="hidden rounded-full border border-sky-200 bg-sky-100 px-4 py-2 text-sm font-medium text-sky-700 transition hover:border-sky-300 hover:bg-sky-200 md:inline-flex dark:border-sky-400/30 dark:bg-sky-400/10 dark:text-sky-200 dark:hover:bg-sky-400/20"
+                >
+                  Contact Me
+                </motion.a>
+              </div>
+            </nav>
+          </header>
+
+          <main className="mx-auto max-w-6xl px-5 pb-16 pt-10 sm:px-6 md:pt-20">
         <motion.section
           id="home"
           initial={{ opacity: 0, y: 28 }}
@@ -599,20 +606,27 @@ export default function Home() {
         </motion.section>
       </main>
 
-      <footer className="border-t border-slate-200/80 py-8 dark:border-slate-200/10">
-        <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 text-sm text-slate-600 md:flex-row md:items-center md:justify-between dark:text-slate-400">
-          <div>
-            <p className="font-medium text-slate-900 dark:text-slate-200">HAMPAN</p>
-            <p>2nd Year B.Tech Computer Science Student</p>
-          </div>
+          <footer className="border-t border-slate-200/80 px-4 py-6 dark:border-slate-200/10">
+            <div className="mx-auto flex max-w-6xl flex-col gap-4 px-2 text-sm text-slate-600 sm:flex-row sm:items-center sm:justify-between dark:text-slate-400">
+              <div className="flex items-center gap-3">
+                <div className="flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-slate-100 text-[11px] font-bold tracking-[0.18em] text-slate-700 dark:border-slate-200/10 dark:bg-slate-900 dark:text-slate-200">
+                  H
+                </div>
+                <div>
+                  <p className="text-[10px] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400">Portfolio</p>
+                  <p className="font-medium text-slate-900 dark:text-slate-100">Hampan Gowda K L</p>
+                </div>
+              </div>
 
-          <div className="flex items-center gap-4">
-            <a href="https://github.com/Hampan29" target="_blank" rel="noreferrer" className="hover:text-sky-600 dark:hover:text-sky-300">GitHub</a>
-            <a href="https://www.linkedin.com/in/hampan-gowda-k-l-58330b375/" target="_blank" rel="noreferrer" className="hover:text-sky-600 dark:hover:text-sky-300">LinkedIn</a>
-            <a href="mailto:hampangowda2934@gmail.com" className="hover:text-sky-600 dark:hover:text-sky-300">Email</a>
-          </div>
+              <div className="flex items-center gap-5 text-slate-600 dark:text-slate-300">
+                <a href="https://github.com/Hampan29" target="_blank" rel="noreferrer" className="transition hover:text-sky-600 dark:hover:text-sky-300">GitHub</a>
+                <a href="https://www.linkedin.com/in/hampan-gowda-k-l-58330b375/" target="_blank" rel="noreferrer" className="transition hover:text-sky-600 dark:hover:text-sky-300">LinkedIn</a>
+                <a href="mailto:hampangowda2934@gmail.com" className="transition hover:text-sky-600 dark:hover:text-sky-300">Email</a>
+              </div>
+            </div>
+          </footer>
         </div>
-      </footer>
+      </div>
     </div>
   );
 }
