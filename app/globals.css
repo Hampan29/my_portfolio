@@ -41,10 +41,51 @@ html.light body {
 
   body {
     @apply antialiased;
+    position: relative;
+  }
+
+  body::before,
+  body::after {
+    content: '';
+    position: fixed;
+    inset: auto;
+    width: 28rem;
+    height: 28rem;
+    border-radius: 9999px;
+    filter: blur(120px);
+    opacity: 0.26;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  body::before {
+    top: -8rem;
+    left: -8rem;
+    background: rgba(56, 189, 248, 0.18);
+  }
+
+  body::after {
+    right: -10rem;
+    bottom: -8rem;
+    background: rgba(129, 140, 248, 0.18);
   }
 
   a {
     @apply transition-colors duration-200;
+  }
+}
+
+@layer components {
+  .section-shell {
+    @apply py-20 md:py-24;
+  }
+
+  .panel-surface {
+    @apply rounded-[28px] border border-slate-200/10 bg-slate-900/70 shadow-[0_0_0_1px_rgba(14,165,233,0.05),0_18px_42px_rgba(2,6,23,0.28)] backdrop-blur-sm;
+  }
+
+  .panel-surface-soft {
+    @apply rounded-[24px] border border-slate-200/10 bg-slate-900/60 shadow-[0_12px_30px_rgba(2,6,23,0.2)] backdrop-blur-sm;
   }
 }
 

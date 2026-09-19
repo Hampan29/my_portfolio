@@ -128,7 +128,7 @@ function ThemeToggle() {
       type="button"
       aria-label="Toggle theme"
       onClick={() => setTheme((current) => (current === 'dark' ? 'light' : 'dark'))}
-      className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200/10 bg-white/5 text-slate-200 transition hover:border-sky-400/60 hover:text-sky-300 dark:bg-slate-900/70 dark:text-slate-200"
+      className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200/10 bg-slate-900/80 text-slate-200 shadow-[0_8px_20px_rgba(15,23,42,0.24)] ring-1 ring-white/5 transition hover:border-sky-400/50 hover:text-sky-300 dark:bg-slate-900/80 dark:text-slate-200"
     >
       {theme === 'dark' ? <SunMedium className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
     </button>
@@ -149,7 +149,7 @@ export default function Home() {
       <div className="fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(125,211,252,0.14),transparent_30%)]" />
 
       <header className="sticky top-0 z-50 border-b border-slate-200/10 bg-slate-950/70 shadow-[0_1px_0_rgba(148,163,184,0.14)] backdrop-blur-2xl dark:bg-slate-950/70">
-        <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+        <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-6">
           <a href="#home" className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-100">
             HAMPAN
           </a>
@@ -178,7 +178,7 @@ export default function Home() {
         </nav>
       </header>
 
-      <main className="mx-auto max-w-6xl px-6 pb-16 pt-10 md:pt-20">
+      <main className="mx-auto max-w-6xl px-5 pb-16 pt-10 sm:px-6 md:pt-20">
         <motion.section
           id="home"
           initial={{ opacity: 0, y: 28 }}
@@ -279,7 +279,7 @@ export default function Home() {
             initial={{ opacity: 0, x: 22 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.25, ease: 'easeOut' }}
-            className="relative overflow-hidden rounded-[28px] border border-slate-200/10 bg-slate-900/70 p-6 shadow-[0_30px_80px_rgba(14,165,233,0.12)] backdrop-blur-sm"
+            className="panel-surface relative overflow-hidden p-6 md:p-7"
           >
             <motion.div
               animate={{ y: [0, -8, 0] }}
@@ -329,12 +329,12 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
-          className="py-20"
+          className="section-shell"
         >
           <SectionHeading eyebrow="About" title="A student developer with a practical mindset and a strong learning focus." />
 
           <div className="grid gap-6 md:grid-cols-2">
-            <div className="rounded-3xl border border-sky-400/10 bg-slate-900/70 p-7 shadow-[0_0_0_1px_rgba(14,165,233,0.06),0_24px_48px_rgba(2,6,23,0.45)]">
+              <div className="panel-surface-soft p-7">
               <p className="text-base leading-8 text-slate-100">
                 I am a second-year B.Tech Computer Science Engineering student focused on strengthening my programming
                 and software development skills through hands-on learning. I enjoy solving problems, understanding how
@@ -342,7 +342,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="rounded-3xl border border-sky-400/10 bg-slate-900/70 p-7 shadow-[0_0_0_1px_rgba(14,165,233,0.06),0_24px_48px_rgba(2,6,23,0.45)]">
+            <div className="panel-surface-soft p-7">
               <p className="text-base leading-8 text-slate-100">
                 My interests lie in modern web development, data structures, and clean UI design. I am actively learning
                 through coursework, personal projects, and problem-solving practice while aiming to build a strong base for
@@ -358,13 +358,13 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
-          className="py-20"
+          className="section-shell"
         >
           <SectionHeading eyebrow="Skills" title="Core technologies and growing engineering strengths." />
 
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {skills.map((group) => (
-              <div key={group.title} className="rounded-3xl border border-sky-400/10 bg-slate-900/70 p-6 shadow-[0_0_0_1px_rgba(14,165,233,0.05),0_18px_40px_rgba(2,6,23,0.35)] transition hover:-translate-y-1 hover:border-sky-400/20">
+              <div key={group.title} className="panel-surface-soft p-6 transition duration-300 hover:-translate-y-1 hover:border-sky-400/30 hover:shadow-[0_18px_40px_rgba(56,189,248,0.09)]">
                 <h3 className="mb-4 text-lg font-semibold text-white">{group.title}</h3>
                 <div className="flex flex-wrap gap-2">
                   {group.items.map((item) => (
@@ -387,7 +387,7 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
-          className="py-20"
+          className="section-shell"
         >
           <SectionHeading eyebrow="Projects" title="Selected work that reflects technical curiosity and execution." />
 
@@ -397,7 +397,7 @@ export default function Home() {
                 key={project.title}
                 whileHover={{ y: -4 }}
                 transition={{ duration: 0.2 }}
-                className="group flex h-full flex-col overflow-hidden rounded-3xl border border-sky-400/10 bg-slate-900/70 shadow-[0_0_0_1px_rgba(14,165,233,0.05),0_18px_40px_rgba(2,6,23,0.4)]"
+                className="panel-surface-soft group flex h-full flex-col overflow-hidden"
               >
                 <div className="flex h-40 items-end border-b border-slate-200/10 bg-[radial-gradient(circle_at_top_left,_rgba(125,211,252,0.18),transparent_25%),linear-gradient(135deg,#0f172a,#1e293b)] p-5">
                   <span className="rounded-full border border-white/10 bg-black/20 px-2.5 py-1 text-[10px] uppercase tracking-[0.2em] text-sky-200">
@@ -445,7 +445,7 @@ export default function Home() {
         >
           <SectionHeading eyebrow="Education" title="Academic foundation in Computer Science and software learning." />
 
-          <div className="rounded-3xl border border-sky-400/10 bg-slate-900/70 p-7 shadow-[0_0_0_1px_rgba(14,165,233,0.06),0_24px_48px_rgba(2,6,23,0.45)]">
+          <div className="panel-surface-soft p-7">
             <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
               <div>
                 <div className="mb-2 inline-flex items-center gap-2 rounded-full border border-sky-400/20 bg-sky-400/10 px-3 py-1 text-xs uppercase tracking-[0.18em] text-sky-300">
@@ -481,13 +481,13 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
-          className="py-20"
+          className="section-shell"
         >
           <SectionHeading eyebrow="Experience" title="Learning, growth, and practical development milestones." />
 
           <div className="grid gap-5 md:grid-cols-3">
             {achievements.map((item) => (
-              <div key={item.title} className="rounded-3xl border border-sky-400/10 bg-slate-900/70 p-6 shadow-[0_0_0_1px_rgba(14,165,233,0.05),0_18px_40px_rgba(2,6,23,0.35)]">
+              <div key={item.title} className="panel-surface-soft p-6">
                 <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-sky-400/20 bg-sky-400/10 px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-sky-300">
                   <Trophy className="h-3.5 w-3.5" />
                   {item.meta}
@@ -505,11 +505,11 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
-          className="py-20"
+          className="section-shell"
         >
           <SectionHeading eyebrow="Contact" title="Let’s connect and build something meaningful." />
 
-          <div className="grid gap-8 rounded-3xl border border-sky-400/10 bg-slate-900/70 p-7 shadow-[0_0_0_1px_rgba(14,165,233,0.06),0_24px_48px_rgba(2,6,23,0.45)] md:grid-cols-[1fr_1.2fr]">
+          <div className="panel-surface-soft grid gap-8 p-7 md:grid-cols-[1fr_1.2fr]">
             <div className="space-y-5">
               <a href="mailto:hampangowda2934@gmail.com" className="flex items-center gap-3 text-slate-100 hover:text-sky-300">
                 <Mail className="h-4 w-4 text-sky-300" />
