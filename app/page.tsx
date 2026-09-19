@@ -97,7 +97,7 @@ function SectionHeading({ eyebrow, title }: { eyebrow: string; title: string }) 
   return (
     <div className="mb-10 max-w-2xl">
       <p className="mb-3 text-xs font-semibold uppercase tracking-[0.24em] text-sky-400">{eyebrow}</p>
-      <h2 className="text-3xl font-semibold tracking-tight text-slate-900 dark:text-white md:text-4xl">{title}</h2>
+      <h2 className="text-3xl font-semibold tracking-tight text-white md:text-4xl">{title}</h2>
     </div>
   );
 }
@@ -327,7 +327,7 @@ export default function Home() {
 
           <div className="grid gap-6 md:grid-cols-2">
             <div className="rounded-3xl border border-slate-200/10 bg-white/[0.02] p-7">
-              <p className="text-base leading-8 text-slate-300">
+              <p className="text-base leading-8 text-slate-200">
                 I am a second-year B.Tech Computer Science Engineering student focused on strengthening my programming
                 and software development skills through hands-on learning. I enjoy solving problems, understanding how
                 systems work, and building practical software that turns ideas into real-world functionality.
@@ -335,7 +335,7 @@ export default function Home() {
             </div>
 
             <div className="rounded-3xl border border-slate-200/10 bg-white/[0.02] p-7">
-              <p className="text-base leading-8 text-slate-300">
+              <p className="text-base leading-8 text-slate-200">
                 My interests lie in modern web development, data structures, and clean UI design. I am actively learning
                 through coursework, personal projects, and problem-solving practice while aiming to build a strong base for
                 internships, collaboration, and future software engineering opportunities.
@@ -403,7 +403,7 @@ export default function Home() {
                     <ExternalLink className="h-4 w-4 text-slate-400 transition group-hover:text-sky-300" />
                   </div>
 
-                  <p className="text-sm leading-7 text-slate-300">{project.description}</p>
+                  <p className="text-sm leading-7 text-slate-200">{project.description}</p>
 
                   <div className="mt-5 flex flex-wrap gap-2">
                     {project.stack.map((tech) => (
@@ -485,7 +485,7 @@ export default function Home() {
                   {item.meta}
                 </div>
                 <h3 className="mb-3 text-lg font-semibold text-white">{item.title}</h3>
-                <p className="text-sm leading-7 text-slate-300">{item.detail}</p>
+                <p className="text-sm leading-7 text-slate-200">{item.detail}</p>
               </div>
             ))}
           </div>
