@@ -138,9 +138,17 @@ function ThemeToggle() {
 export default function Home() {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100">
+      <div className="pointer-events-none fixed inset-0 -z-20 overflow-hidden opacity-90">
+        <div className="absolute -left-24 top-12 h-80 w-80 rounded-full bg-sky-400/20 blur-[120px]" />
+        <div className="absolute -right-24 top-20 h-[26rem] w-[26rem] rounded-full bg-cyan-400/18 blur-[120px]" />
+        <div className="absolute bottom-[-7rem] left-[10%] h-[22rem] w-[22rem] rounded-full bg-indigo-400/16 blur-[120px]" />
+        <div className="absolute bottom-[-8rem] right-[12%] h-[24rem] w-[24rem] rounded-full bg-sky-500/18 blur-[120px]" />
+        <div className="absolute inset-x-0 top-0 h-52 bg-[radial-gradient(circle_at_top,_rgba(125,211,252,0.26),transparent_60%)]" />
+        <div className="absolute inset-x-0 bottom-0 h-64 bg-[radial-gradient(circle_at_bottom,_rgba(34,211,238,0.12),transparent_60%)]" />
+      </div>
       <div className="fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(125,211,252,0.14),transparent_30%)]" />
 
-      <header className="sticky top-0 z-50 border-b border-slate-200/10 bg-slate-950/70 backdrop-blur-xl dark:bg-slate-950/70">
+      <header className="sticky top-0 z-50 border-b border-slate-200/10 bg-slate-950/70 shadow-[0_1px_0_rgba(148,163,184,0.14)] backdrop-blur-2xl dark:bg-slate-950/70">
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <a href="#home" className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-100">
             HAMPAN
