@@ -73,6 +73,22 @@ const projects = [
     github: 'https://github.com/Hampan29',
     demo: 'https://hampan29.github.io/my_portfolio/',
   },
+  {
+    title: 'Hello World in C',
+    description:
+      'A first C program that prints “Hello World,” built while practicing how to compile and run C code. The project also documents early Git and GitHub workflow fundamentals.',
+    stack: ['C', 'GCC', 'Git', 'GitHub'],
+    github: 'https://github.com/Hampan29/hello_world_c',
+    demo: null,
+  },
+  {
+    title: 'LeetCode Solutions',
+    description:
+      'A growing collection of C solutions organized across arrays and strings, basic algorithms, and stacks. It tracks my progress while building problem-solving fundamentals.',
+    stack: ['C', 'Arrays & Strings', 'Algorithms', 'Stacks'],
+    github: 'https://github.com/Hampan29/leetcode-solutions',
+    demo: null,
+  },
 ];
 
 const achievements = [
@@ -466,7 +482,11 @@ export default function Home() {
 
                 <div className="flex flex-1 flex-col p-6">
                   <div className="mb-4 flex items-center justify-between gap-3">
-                    <h3 className="text-xl font-semibold text-slate-900 dark:text-white">{project.title}</h3>
+                    <h3 className="text-xl font-semibold text-slate-900 dark:text-white">
+                      <a href={project.github} target="_blank" rel="noreferrer" className="transition-colors hover:text-sky-700 dark:hover:text-sky-300">
+                        {project.title}
+                      </a>
+                    </h3>
                     <ExternalLink className="h-4 w-4 text-slate-400 transition group-hover:text-sky-600 dark:group-hover:text-sky-300" />
                   </div>
 
@@ -484,9 +504,11 @@ export default function Home() {
                     <a href={project.github} target="_blank" rel="noreferrer" className="text-sm font-medium text-sky-700 hover:text-sky-600 dark:text-sky-300 dark:hover:text-sky-200">
                       GitHub
                     </a>
-                    <a href={project.demo} target="_blank" rel="noreferrer" className="text-sm font-medium text-slate-700 hover:text-slate-900 dark:text-slate-200 dark:hover:text-white">
-                      Live Demo
-                    </a>
+                    {project.demo && (
+                      <a href={project.demo} target="_blank" rel="noreferrer" className="text-sm font-medium text-slate-700 hover:text-slate-900 dark:text-slate-200 dark:hover:text-white">
+                        Live Demo
+                      </a>
+                    )}
                   </div>
                 </div>
               </motion.article>
